@@ -1,16 +1,16 @@
 import { Item } from "@/core";
 
 export class Queue<T extends Object> {
-  public size: number = 0;
+  private queueSize: number = 0;
   private items?: Item<T>;
   private tail?: Item<T>;
 
-  public push(item: T): typeof this.size {
-    this.size++;
+  public push(item: T): typeof this.queueSize {
+    this.queueSize++;
 
     if (!this.tail) {
       this.items = this.tail = new Item(item);
-      return this.size;
+      return this.queueSize;
     }
 
     const newItem = new Item(item);
@@ -18,17 +18,17 @@ export class Queue<T extends Object> {
     this.tail.next = newItem;
     this.tail = newItem;
 
-    return this.size;
+    return this.queueSize;
   }
 
   public pop(): T | undefined {
-    if (this.size <= 0) return undefined;
+    if (this.queueSize <= 0) return undefined;
 
     const oldItem = this.items;
 
     this.items = this.items?.next;
 
-    this.size--;
+    this.queueSize--;
 
     return oldItem?.item;
   }
@@ -36,6 +36,14 @@ export class Queue<T extends Object> {
   public clear() {
     this.items = undefined;
     this.tail = undefined;
-    this.size = 0;
+    this.queueSize = 0;
+  }
+
+  public size() {
+    return this.queueSize;
+  }
+
+  public isEmpty() {
+    return this.queueSize === 0;
   }
 }
