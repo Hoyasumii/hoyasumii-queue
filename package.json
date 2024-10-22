@@ -1,0 +1,16 @@
+{
+  "name": "@hoyasumii/simple-queue",
+  "version": "1.0.0",
+  "main": "dist/Queue.js",
+  "types": "dist/Queue.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Alan Reis Anjos",
+  "license": "ISC",
+  "description": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
