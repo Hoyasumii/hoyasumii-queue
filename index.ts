@@ -1,5 +1,3 @@
-import "module-alias/register";
-
 import { Item } from "@/core";
 
 export class Queue<T extends Object> {
