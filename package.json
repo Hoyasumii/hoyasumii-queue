@@ -1,11 +1,11 @@
 {
   "name": "hoyasumii-queue",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && tsc-alias"
   },
   "keywords": [],
   "files": [
@@ -16,16 +16,11 @@
   "license": "MIT",
   "description": "Um pacote de Node.js para gerenciar filas (queues) de maneira simples e eficiente.",
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "tsc-alias": "^1.8.11",
+    "typescript": "^5.8.2"
   },
   "repository": {
     "url": "https://github.com/Hoyasumii/hoyasumii-queue"
   },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
-  "dependencies": {
-    "module-alias": "^2.2.3"
-  },
-  "_moduleAliases": {
-    "@/": "./dist"
-  }
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
