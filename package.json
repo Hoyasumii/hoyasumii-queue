@@ -1,6 +1,6 @@
 {
   "name": "hoyasumii-queue",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -8,6 +8,10 @@
     "build": "tsc"
   },
   "keywords": [],
+  "files": [
+    "dist",
+    "dist/core"
+  ],
   "author": "Alan Reis Anjos <alanreisanjo@gmail.com>",
   "license": "MIT",
   "description": "Um pacote de Node.js para gerenciar filas (queues) de maneira simples e eficiente.",
