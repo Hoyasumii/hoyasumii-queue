@@ -1,4 +1,4 @@
-import { Item } from "@/core";
+import { Item } from "core";
 
 export class Queue<T extends Object> {
   private queueSize: number = 0;
